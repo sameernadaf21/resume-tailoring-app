@@ -4,7 +4,7 @@ import PyPDF2
 import google.generativeai as genai
 
 # Configure the generative AI model
-genai.configure(api_key="AIzaSyB_ZwnVAVGk_KneM2Qr8xUQztbbMoLnEVs")
+genai.configure(api_key=st.secrets["general"]["genai_api_key"])
 model = genai.GenerativeModel("gemini-2.0-flash-exp")
 
 # Function to extract text from the uploaded file
